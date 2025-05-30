@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" type="static" mediaPresentationDuration="PT10M0S">
+  <Period>
+    <!-- Video Adaptation Set with multiple codecs -->
+    <AdaptationSet mimeType="video/mp4" segmentAlignment="true">
+      <!-- H.264 Track -->
+      <Representation id="1" bandwidth="500000" codecs="avc1.64001f" width="640" height="360">
+        <BaseURL>video_h264_360p.mp4</BaseURL>
+        <SegmentBase indexRange="674-981">
+          <Initialization range="0-673"/>
+        </SegmentBase>
+      </Representation>
+      
+      <!-- H.265 Track -->
+      <Representation id="2" bandwidth="400000" codecs="hvc1.1.6.L120.90" width="640" height="360">
+        <BaseURL>video_h265_360p.mp4</BaseURL>
+        <SegmentBase indexRange="674-981">
+          <Initialization range="0-673"/>
+        </SegmentBase>
+      </Representation>
+      
+      <!-- VP9 Track -->
+      <Representation id="3" bandwidth="350000" codecs="vp09.00.10.08" width="640" height="360">
+        <BaseURL>video_vp9_360p.webm</BaseURL>
+        <SegmentBase indexRange="674-981">
+          <Initialization range="0-673"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    
+    <!-- Audio Adaptation Set -->
+    <AdaptationSet mimeType="audio/mp4" segmentAlignment="true">
+      <!-- AAC Track -->
+      <Representation id="4" bandwidth="128000" codecs="mp4a.40.2">
+        <BaseURL>audio_aac.mp4</BaseURL>
+        <SegmentBase indexRange="592-851">
+          <Initialization range="0-591"/>
+        </SegmentBase>
+      </Representation>
+      
+      <!-- Opus Track -->
+      <Representation id="5" bandwidth="96000" codecs="opus">
+        <BaseURL>audio_opus.webm</BaseURL>
+        <SegmentBase indexRange="592-851">
+          <Initialization range="0-591"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
