@@ -1,48 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" type="static" mediaPresentationDuration="PT10M0S">
-  <Period>
-    <!-- Video Adaptation Set with multiple codecs -->
-    <AdaptationSet mimeType="video/mp4" segmentAlignment="true">
-      <!-- H.264 Track -->
-      <Representation id="1" bandwidth="500000" codecs="avc1.64001f" width="640" height="360">
-        <BaseURL>video_h264_360p.mp4</BaseURL>
-        <SegmentBase indexRange="674-981">
-          <Initialization range="0-673"/>
-        </SegmentBase>
-      </Representation>
-      
-      <!-- H.265 Track -->
-      <Representation id="2" bandwidth="400000" codecs="hvc1.1.6.L120.90" width="640" height="360">
-        <BaseURL>video_h265_360p.mp4</BaseURL>
-        <SegmentBase indexRange="674-981">
-          <Initialization range="0-673"/>
-        </SegmentBase>
-      </Representation>
-      
-      <!-- VP9 Track -->
-      <Representation id="3" bandwidth="350000" codecs="vp09.00.10.08" width="640" height="360">
-        <BaseURL>video_vp9_360p.webm</BaseURL>
-        <SegmentBase indexRange="674-981">
-          <Initialization range="0-673"/>
+<!--Generated with https://github.com/google/shaka-packager version 97fc982-release-->
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" xmlns:cenc="urn:mpeg:cenc:2013" minBufferTime="PT2S" type="static" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" mediaPresentationDuration="PT733.999S">
+  <Period id="0">
+    <AdaptationSet id="0" contentType="audio" lang="en">
+        <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed" cenc:default_KID="30303030-3030-3030-3030-303030303030">
+          <cenc:pssh>AAAAR3Bzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAACcIARIBMBoNd2lkZXZpbmVfdGVzdCIKMjAxNV90ZWFycyoFQVVESU8=</cenc:pssh>
+        </ContentProtection>
+      <Representation id="0" bandwidth="128320" codecs="vorbis" mimeType="audio/webm" audioSamplingRate="44100">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <BaseURL>tears_vorbis_audio_eng.webm</BaseURL>
+        <SegmentBase indexRange="4601-5855" timescale="1000000">
+          <Initialization range="0-4600"/>
         </SegmentBase>
       </Representation>
     </AdaptationSet>
-    
-    <!-- Audio Adaptation Set -->
-    <AdaptationSet mimeType="audio/mp4" segmentAlignment="true">
-      <!-- AAC Track -->
-      <Representation id="4" bandwidth="128000" codecs="mp4a.40.2">
-        <BaseURL>audio_aac.mp4</BaseURL>
-        <SegmentBase indexRange="592-851">
-          <Initialization range="0-591"/>
+    <AdaptationSet id="1" contentType="video" maxWidth="1920" maxHeight="856" frameRate="1000000/42000" par="38:17">
+        <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed" cenc:default_KID="30303030-3030-3030-3030-303030303035">
+          <cenc:pssh>AAAARHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAACQIARIBNRoNd2lkZXZpbmVfdGVzdCIKMjAxNV90ZWFycyoCU0Q=</cenc:pssh>
+        </ContentProtection>
+      <Representation id="1" bandwidth="589200" codecs="vp9" mimeType="video/webm" sar="159:160" width="320" height="142">
+        <BaseURL>tears_vp9_240p_600.webm</BaseURL>
+        <SegmentBase indexRange="346-1439" timescale="1000000">
+          <Initialization range="0-345"/>
         </SegmentBase>
       </Representation>
-      
-      <!-- Opus Track -->
-      <Representation id="5" bandwidth="96000" codecs="opus">
-        <BaseURL>audio_opus.webm</BaseURL>
-        <SegmentBase indexRange="592-851">
-          <Initialization range="0-591"/>
+      <Representation id="2" bandwidth="1564637" codecs="vp9" mimeType="video/webm" sar="159:160" width="640" height="284">
+        <BaseURL>tears_vp9_360p_1600.webm</BaseURL>
+        <SegmentBase indexRange="348-1453" timescale="1000000">
+          <Initialization range="0-347"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="3" bandwidth="3905475" codecs="vp9" mimeType="video/webm" sar="1277:1280" width="1280" height="570">
+        <BaseURL>tears_vp9_720p_4000.webm</BaseURL>
+        <SegmentBase indexRange="348-1457" timescale="1000000">
+          <Initialization range="0-347"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="4" bandwidth="4890174" codecs="vp9" mimeType="video/webm" sar="959:960" width="1920" height="856">
+        <BaseURL>tears_vp9_1080p_5000.webm</BaseURL>
+        <SegmentBase indexRange="348-1458" timescale="1000000">
+          <Initialization range="0-347"/>
         </SegmentBase>
       </Representation>
     </AdaptationSet>
